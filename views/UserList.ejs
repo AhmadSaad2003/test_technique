@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+
+        h1 {
+            color: #333;
+        }
+
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        li {
+            background-color: #fff;
+            margin: 5px;
+            padding: 10px;
+            border-radius: 5px;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+        }
+
+        p {
+            color: #333;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>User List</h1>
+
+    <% if (users.length> 0) { %>
+        <ul>
+            <% for (user of users) { %>
+                <li>
+                    <%= user.email %>
+                </li>
+                <% } %>
+        </ul>
+        <% } else { %>
+            <p>No users found.</p>
+            <% } %>
+</body>
+
+</html>
